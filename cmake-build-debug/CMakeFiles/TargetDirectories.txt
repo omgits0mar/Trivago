@@ -1,0 +1,3 @@
+C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/Trivago.dir
+C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/rebuild_cache.dir
