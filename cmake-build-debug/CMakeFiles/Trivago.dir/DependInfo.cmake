@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Omar/CLionProjects/Trivago/Hotel.cpp" "C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/Trivago.dir/Hotel.cpp.obj"
+  "C:/Users/Omar/CLionProjects/Trivago/Trivago.cpp" "C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/Trivago.dir/Trivago.cpp.obj"
   "C:/Users/Omar/CLionProjects/Trivago/main.cpp" "C:/Users/Omar/CLionProjects/Trivago/cmake-build-debug/CMakeFiles/Trivago.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

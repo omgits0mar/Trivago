@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Omar/CLionProjects/Trivago/Hotel.cpp">
+			<Option target="Trivago"/>
+		</Unit>
+		<Unit filename="C:/Users/Omar/CLionProjects/Trivago/Hotel.h">
+			<Option target="Trivago"/>
+		</Unit>
+		<Unit filename="C:/Users/Omar/CLionProjects/Trivago/Trivago.cpp">
+			<Option target="Trivago"/>
+		</Unit>
+		<Unit filename="C:/Users/Omar/CLionProjects/Trivago/Trivago.h">
+			<Option target="Trivago"/>
+		</Unit>
 		<Unit filename="C:/Users/Omar/CLionProjects/Trivago/main.cpp">
 			<Option target="Trivago"/>
 		</Unit>

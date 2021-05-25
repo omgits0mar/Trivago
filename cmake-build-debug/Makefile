@@ -142,6 +142,60 @@ Trivago/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/build
 .PHONY : Trivago/fast
 
+Hotel.obj: Hotel.cpp.obj
+
+.PHONY : Hotel.obj
+
+# target to build an object file
+Hotel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Hotel.cpp.obj
+.PHONY : Hotel.cpp.obj
+
+Hotel.i: Hotel.cpp.i
+
+.PHONY : Hotel.i
+
+# target to preprocess a source file
+Hotel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Hotel.cpp.i
+.PHONY : Hotel.cpp.i
+
+Hotel.s: Hotel.cpp.s
+
+.PHONY : Hotel.s
+
+# target to generate assembly for a file
+Hotel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Hotel.cpp.s
+.PHONY : Hotel.cpp.s
+
+Trivago.obj: Trivago.cpp.obj
+
+.PHONY : Trivago.obj
+
+# target to build an object file
+Trivago.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Trivago.cpp.obj
+.PHONY : Trivago.cpp.obj
+
+Trivago.i: Trivago.cpp.i
+
+.PHONY : Trivago.i
+
+# target to preprocess a source file
+Trivago.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Trivago.cpp.i
+.PHONY : Trivago.cpp.i
+
+Trivago.s: Trivago.cpp.s
+
+.PHONY : Trivago.s
+
+# target to generate assembly for a file
+Trivago.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trivago.dir\build.make CMakeFiles/Trivago.dir/Trivago.cpp.s
+.PHONY : Trivago.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -178,6 +232,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Trivago
+	@echo ... Hotel.obj
+	@echo ... Hotel.i
+	@echo ... Hotel.s
+	@echo ... Trivago.obj
+	@echo ... Trivago.i
+	@echo ... Trivago.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
