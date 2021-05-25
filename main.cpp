@@ -7,6 +7,7 @@ using namespace std;
 
 int main() {
     cout << "Hello, Team!" << endl;
+    cout<<"Test"<<el;
 
     return 0;
 }
