@@ -20,6 +20,32 @@ class Hotel{
         Hotel();
         void display();
     };
+class Admin{
+
+private:
+    string userName,pass;
+public:
+    Admin();
+    string getUserName(){
+        return userName;
+    };
+    string getpass(){
+        return pass;
+    };
+
+};  //finished
+
+class Room{
+private:
+    int ID;
+    string roomType;
+    bool tv,wifi;
+    string reservation_duration;
+    double price;
+
+public:
+    Room();
+};
 
 
 #endif //TRIVAGO_HOTEL_H

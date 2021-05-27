@@ -1,0 +1,22 @@
+_Functions:
+    Admin:
+        1. Update Function on Hotel information;
+
+        2. Delete specific hotel by Name;
+
+        3. Display specific hotel information;
+
+        4. Search for hotel availability;
+
+        5. Filter hotels with rate/number of stars;
+
+    User:
+        1.  search for hotels with specific query (has pool , with wifi,…..etc) ;
+
+_Implementation:
+    1. Create arr of comments;
+    2. Create arr of room obj in Hotel class;
+
+_FileStream:
+    1. save and export Hotel/rooms data;
+

@@ -20,10 +20,10 @@ Hotel::Hotel() {
 void Hotel::display() {
     cout<<name<<el;
     cout<<country<<el;
-//    cout<<location<<el;
-//    cout<<comment<<el;
+    cout<<location<<el;
+    cout<<comment<<el;
     cout<<stars<<el;
-//    cout<<rate<<el;
+    cout<<rate<<el;
     cout<<roomNumbers<<el;
     if (hasGym==true)
         cout<<"yes"<<el;
