@@ -33,3 +33,8 @@ void Hotel::display() {
     else cout<<"No pools"<<el;
     cout<<el;
 }
+
+Admin::Admin() {
+    userName="Ibrahim";
+    pass="123456";
+}
