@@ -50,6 +50,8 @@ int main() {
         cin>>n;
         cout<<"Enter Password:";
         cin>>p;
+        system("clr");
+
         if (n==a.getUserName() && p==a.getpass()) {
             cout<<"Welcome Mr. "<<a.getUserName();
             cout << "\nPress 1 to Insert" << el;
@@ -59,6 +61,7 @@ int main() {
             cout << "Press 5 to Display" << el;
             cout << "Press 6 to Exit" << el;
             cout<<"To Return to Home Page press 0"<<el;
+            cin>>goTo;
             switch (goTo)
             {
                 case 1:
