@@ -23,9 +23,12 @@ public:
     void append(Hotel);
     void expand();
     void display();
+    void diplayHotel(string);
     Hotel findAt(int);
     void insertAt(int, Hotel);
     void deleteAt(int);
+    void deleteBy(string);
+    void searchWithQuery();
     ~ArrayList();
 };
 

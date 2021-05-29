@@ -47,6 +47,13 @@ void ArrayList::display() {
     }
 }
 
+void ArrayList::diplayHotel(string n) {
+    for (int i = 0; i < count; i++) {
+        if (arr[i].name == n)
+            arr[i].display();
+    }
+}
+
 
 Hotel ArrayList::findAt(int i) {
     assert(i>0 && i<count);
@@ -67,17 +74,51 @@ void ArrayList::insertAt(int i, Hotel value) {
 
 
 void ArrayList::deleteAt(int i) {
-    assert(i>0 && i<count);
+    assert(i<count);
     for (int j = i; j < count-1; ++j) {
         arr[i]=arr[i+1];
     }
     count--;
 }
 
+void ArrayList::deleteBy(string n) {
+    for (int i = 0; i < count; i++) {
+        if (arr[i].name == n)
+            deleteAt(i);
+    }
+}
+
 
 ArrayList::~ArrayList() {
     delete[] arr;
-} // Lab 4
+}
+
+void ArrayList::searchWithQuery() {
+    string query;
+    cout << "Do you want to search for wifi or gym or pool?";
+    cin >> query;
+    if (query == "wifi") {
+             for (int i = 0; i < count; i++) {
+                 if (arr[i].hasGym)
+                     arr[i].display();
+             }
+    }
+    else if (query == "gym") {
+        for (int i = 0; i < count; i++) {
+            if (arr[i].hasGym)
+                arr[i].display();
+        }
+    }
+    else if (query == "pool") {
+        for (int i = 0; i < count; i++) {
+            if (arr[i].hasPool)
+                arr[i].display();
+        }
+    }
+}
+
+
+// Lab 4
 
 
 
