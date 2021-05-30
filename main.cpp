@@ -94,8 +94,21 @@ int main() {
                     arr.deleteBy(HotelName);
                     goto AdminMenu;
                 case 5:
-                    arr.display();
-                    break;
+                    DisplaySearch:
+                    int display;
+                    cout << "Press 1 to display hotel in by name." << el;
+                    cout << "Press 2 to display all hotels." << el;
+                    if(display == 1){
+                        cout << "Enter the hotel name that you want to display:"<< el;
+                        cin >> HotelName;
+                        arr.displayHotel(HotelName);
+                    }else if(display == 2){
+                        arr.display();
+                    }else{
+                        cout << "You have entered wrong value. \nPlease try again." << el;
+                        goto DisplaySearch;
+                    }
+                    goto AdminMenu;
                 case 6:
                     break;
                 case 0:

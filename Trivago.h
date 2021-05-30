@@ -23,7 +23,7 @@ public:
     void append(Hotel);
     void expand();
     void display();
-    void diplayHotel(string);
+    void displayHotel(string);
     Hotel findAt(int);
     void insertAt(int, Hotel);
     void deleteAt(int);

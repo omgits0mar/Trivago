@@ -48,7 +48,7 @@ void ArrayList::display() {
     }
 }
 
-void ArrayList::diplayHotel(string n) {
+void ArrayList::displayHotel(string n) {
     for (int i = 0; i < count; i++) {
         if (arr[i].name == n)
             arr[i].display();
