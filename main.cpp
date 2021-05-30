@@ -98,6 +98,7 @@ int main() {
                     int display;
                     cout << "Press 1 to display hotel in by name." << el;
                     cout << "Press 2 to display all hotels." << el;
+                    cin >> display;
                     if(display == 1){
                         cout << "Enter the hotel name that you want to display:"<< el;
                         cin >> HotelName;
