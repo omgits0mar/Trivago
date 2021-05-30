@@ -4,7 +4,8 @@
 
 #include "Trivago.h"
 #define t template<class dt>
-#include<bits/stdc++.h>
+#include<iostream>
+#include "assert.h"
 #define el '\n'
 
 using namespace std;
@@ -85,6 +86,9 @@ void ArrayList::deleteBy(string n) {
     for (int i = 0; i < count; i++) {
         if (arr[i].name == n)
             deleteAt(i);
+        else{
+            cout << "There is no hotel with the given name";
+        }
     }
 }
 
@@ -94,8 +98,9 @@ ArrayList::~ArrayList() {
 }
 
 void ArrayList::searchWithQuery() {
+    queryError:
     string query;
-    cout << "Do you want to search for wifi or gym or pool?";
+    cout << "Do you want to search for wifi or gym or pool?" << el;
     cin >> query;
     if (query == "wifi") {
              for (int i = 0; i < count; i++) {
@@ -114,6 +119,77 @@ void ArrayList::searchWithQuery() {
             if (arr[i].hasPool)
                 arr[i].display();
         }
+    }else{
+        cout << "you have entered a wrong value. \nPlease try again."<< el;
+        goto queryError;
+    }
+}
+
+void ArrayList::searchHotelsAvailability(int day){
+    for (int i = 0; i < count; i++) {
+            if (arr[i].available[day-1] == true)
+                arr[i].display();
+            else{
+                cout << "There isn't any available hotel at that current day" << el;
+            }
+    }
+
+}
+
+void ArrayList::filterByHotelNumberOfStars(int stars) {
+    for (int i = 0; i < count; i++) {
+        if (arr[i].stars == stars)
+            arr[i].display();
+        else{
+            cout << "There isn't any hotel with this number of stars" << el;
+        }
+    }
+}
+
+int ArrayList::searchHotelsAvailability() {
+    int dayNumber;
+    dayTryAgain:
+    cout << "choose from the following days: " << el;
+    cout << "1: Saturday " << el;
+    cout << "2: Sunday " << el;
+    cout << "3: Monday " << el;
+    cout << "4: tuesday " << el;
+    cout << "5: Wednesday " << el;
+    cout << "6: Thursday " << el;
+    cout << "7: Friday " << el;
+
+    cin >> dayNumber;
+
+    if(dayNumber > 7 || dayNumber < 1){
+        cout << "the selected value isn't available" << el;
+        cout << "please try again" << el;
+        goto dayTryAgain;
+    }
+    else{
+        return dayNumber;
+    }
+}
+int ArrayList::filterByHotelNumberOfStars(){
+    int starNumber;
+    starTryAgain:
+    cout << "choose number of stars: " << el;
+    cout << "1: * " << el;
+    cout << "2: ** " << el;
+    cout << "3: *** " << el;
+    cout << "4: **** " << el;
+    cout << "5: ***** " << el;
+    cout << "6: ****** " << el;
+    cout << "7: ******* " << el;
+
+    cin >> starNumber;
+
+    if(starNumber > 7 || starNumber < 1){
+        cout << "the selected value isn't available" << el;
+        cout << "please try again" << el;
+        goto starTryAgain;
+    }
+    else{
+        return starNumber;
     }
 }
 

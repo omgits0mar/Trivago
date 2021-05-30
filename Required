@@ -6,12 +6,10 @@ _Functions:
 
         3. Display specific hotel information;
 
-        4. Search for hotel availability;
 
-        5. Filter hotels with rate/number of stars;
 
     User:
-        1.  search for hotels with specific query (has pool , with wifi,…..etc) ;
+        1. Reserve a room in a hotel.
 
 _Implementation:
     1. Create arr of comments;

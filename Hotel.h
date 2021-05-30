@@ -1,7 +1,7 @@
 //
 // Created by Omar on 5/26/2021.
 //
-#include<bits/stdc++.h>
+#include<iostream>
 #ifndef TRIVAGO_HOTEL_H
 #define TRIVAGO_HOTEL_H
 #define t template<class dt>
@@ -14,7 +14,7 @@ class Hotel{
         int stars;
         float rate;
         int roomNumbers;
-        bool hasGym,hasPool;
+        bool hasGym,hasPool, available[7];
 
     public:
         Hotel();

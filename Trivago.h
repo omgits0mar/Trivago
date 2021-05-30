@@ -1,7 +1,7 @@
 //
 // Created by Omar on 5/25/2021.
 //
-#include<bits/stdc++.h>
+#include<iostream>
 #include "Hotel.h"
 #ifndef TRIVAGO_TRIVAGO_H
 #define TRIVAGO_TRIVAGO_H
@@ -29,6 +29,10 @@ public:
     void deleteAt(int);
     void deleteBy(string);
     void searchWithQuery();
+    void searchHotelsAvailability(int );
+    void filterByHotelNumberOfStars(int);
+    int searchHotelsAvailability();
+    int filterByHotelNumberOfStars();
     ~ArrayList();
 };
 

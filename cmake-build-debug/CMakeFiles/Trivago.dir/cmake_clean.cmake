@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Trivago.dir/main.cpp.obj"
   "Trivago.exe"
   "Trivago.exe.manifest"
+  "Trivago.lib"
   "Trivago.pdb"
-  "libTrivago.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

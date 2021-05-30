@@ -1,5 +1,8 @@
 Functions:
-    1. Array list of Hotels
-    2. Insert
-    3. Delete By index
-    4. Display All
+    1. Array list of Hotels.
+    2. Insert.
+    3. Delete By index.
+    4. Display All.
+    5. Search for hotel availability.
+    6. Filter hotels with rate/number of stars.
+    7. search for hotels with specific query (has pool , with wifi,…..etc).

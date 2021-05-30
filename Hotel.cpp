@@ -15,22 +15,24 @@ Hotel::Hotel() {
     roomNumbers=0;
     hasGym=false;
     hasPool=false;
+    for(int i = 0; i < 7; i++)
+        available[i] = true;
 }
 
 void Hotel::display() {
-    cout<<name<<el;
-    cout<<country<<el;
-    cout<<location<<el;
-    cout<<comment<<el;
-    cout<<stars<<el;
-    cout<<rate<<el;
-    cout<<roomNumbers<<el;
+    cout<<"\t\t\t\t Hotel name :"<< name<<el;
+    cout<<"\t\t\t\t Hotel country :" <<country<<el;
+    cout<<"\t\t\t\t Hotel location :" <<location<<el;
+    cout<<"\t\t\t\t Hotel comments :" <<comment<<el;
+    cout<<"\t\t\t\t Hotel number of stars :" <<stars<<el;
+    cout<<"\t\t\t\t Hotel rate :" <<rate<<el;
+    cout<<"\t\t\t\t Hotel number of rooms :" <<roomNumbers<<el;
     if (hasGym==true)
-        cout<<"yes"<<el;
-    else cout<<"No gyms"<<el;
+        cout<<"\t\t\t\t Has a gym :" <<"yes"<<el;
+    else cout<<"\t\t\t\t Has a gym :" <<"No gyms"<<el;
     if (hasPool==true)
-        cout<<"yes"<<el;
-    else cout<<"No pools"<<el;
+        cout<<"\t\t\t\t Has a pool :" <<"yes"<<el;
+    else cout<<"\t\t\t\t Has a pool :" <<"No pools"<<el;
     cout<<el;
 }
 

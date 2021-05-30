@@ -6,19 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Omar/CLionProjects/Trivago/Hotel.h
-bits/stdc++.h
+C:/Users/ibrahim/CLionProjects/Trivago/Hotel.h
+iostream
 -
 
-C:/Users/Omar/CLionProjects/Trivago/Trivago.h
-bits/stdc++.h
+C:/Users/ibrahim/CLionProjects/Trivago/Trivago.cpp
+Trivago.h
+C:/Users/ibrahim/CLionProjects/Trivago/Trivago.h
+iostream
+-
+assert.h
+C:/Users/ibrahim/CLionProjects/Trivago/assert.h
+
+C:/Users/ibrahim/CLionProjects/Trivago/Trivago.h
+iostream
 -
 Hotel.h
-C:/Users/Omar/CLionProjects/Trivago/Hotel.h
+C:/Users/ibrahim/CLionProjects/Trivago/Hotel.h
 
-C:/Users/Omar/CLionProjects/Trivago/main.cpp
+C:/Users/ibrahim/CLionProjects/Trivago/main.cpp
 Trivago.h
-C:/Users/Omar/CLionProjects/Trivago/Trivago.h
-bits/stdc++.h
+C:/Users/ibrahim/CLionProjects/Trivago/Trivago.h
+iostream
 -
 
