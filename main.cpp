@@ -53,11 +53,11 @@ int main() {
         cin>>n;
         cout<<"Enter Password:";
         cin>>p;
-        system("clr");
+
 
         if (n==a.getUserName() && p==a.getpass()) {
-            AdminMenu:
             cout<<"Welcome Mr. "<<a.getUserName()<< el;
+            AdminMenu:
             cout << "Press 1 to Insert" << el;
             cout << "Press 2 to Update" << el;
             cout << "Press 3 to Search" << el;
@@ -67,8 +67,7 @@ int main() {
             cout << "Press 0 to Return to Home Page."<<el;
             cin >> goTo;
             string HotelName;
-            switch (goTo)
-            {
+            switch (goTo){
                 case 1:
                     goto AdminMenu;
                 case 2:

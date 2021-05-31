@@ -83,14 +83,18 @@ void ArrayList::deleteAt(int i) {
 }
 
 void ArrayList::deleteBy(string n) {
+    bool check = false;
     for (int i = 0; i < count; i++) {
-        if (arr[i].name == n)
+        if (arr[i].name == n){
             deleteAt(i);
-        else{
-            cout << "There is no hotel with the given name";
+            check = true;
         }
+
     }
+    if (!check)
+            cout << "There is no hotel with the given name" << el;
 }
+
 
 
 ArrayList::~ArrayList() {
@@ -126,23 +130,30 @@ void ArrayList::searchWithQuery() {
 }
 
 void ArrayList::searchHotelsAvailability(int day){
+    bool check = false;
     for (int i = 0; i < count; i++) {
-            if (arr[i].available[day-1] == true)
+            if (arr[i].available[day - 1]){
                 arr[i].display();
-            else{
-                cout << "There isn't any available hotel at that current day" << el;
+                check = true;
             }
     }
+    if(!check){
+        cout << "There isn't any available hotel at that current day" << el;
+    }
+
 
 }
 
 void ArrayList::filterByHotelNumberOfStars(int stars) {
+    bool check = false;
     for (int i = 0; i < count; i++) {
-        if (arr[i].stars == stars)
+        if (arr[i].stars == stars) {
             arr[i].display();
-        else{
-            cout << "There isn't any hotel with this number of stars" << el;
+            check = true;
         }
+    }
+    if(!check){
+        cout << "There isn't any hotel with this number of stars" << el;
     }
 }
 
