@@ -5,7 +5,7 @@
 
 
 using namespace std;
-
+string days[7] ={"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
 int main() {
     char user;
@@ -66,10 +66,49 @@ int main() {
             cout << "Press 6 to Exit" << el;
             cout << "Press 0 to Return to Home Page."<<el;
             cin >> goTo;
+            Hotel h3;
+            Hotel *H;
             string HotelName;
             switch (goTo){
-                case 1:
+                case 1:{
+                    char check;
+                    cout << "Enter hotel name: " << el;
+                    cin >> h3.name;
+                    cout << "Enter hotel country: " << el;
+                    cin >> h3.country;
+                    cout << "Enter hotel location: " << el;
+                    cin >> h3.location;
+                    cout << "Enter hotel number of starts: " << el;
+                    cin >> h3.stars;
+                    cout << "hotel has gym (Y/N): " << el;
+                    cin >> check;
+                    if (check== 'Y' || check== 'y')
+                        h3.hasGym = true;
+                    else
+                        h3.hasGym = false;
+                    cout << "hotel has pool (Y/N): " << el;
+                    cin >> check;
+                    if (check== 'Y' || check== 'y')
+                        h3.hasPool = true;
+                    else
+                        h3.hasPool = false;
+                    cout << "Enter hotel number of rooms: " << el;
+                    cin >> h3.roomNumbers;
+                    cout << "Enter hotel rate: " << el;
+                    cin >> h3.rate;
+                    cout << "Enter hotel availability: " << el;
+                    for (int i = 0; i < 7; ++i) {
+                        cout << days[i] << " :";
+                        cin >> check;
+                        if (check== 'Y' || check== 'y')
+                            h3.available[i] = true;
+                        else
+                            h3.available[i] = false;
+                    }
+                    H = &h3;
+                    arr.append(*H);
                     goto AdminMenu;
+                }
                 case 2:
                     goto AdminMenu;
                 case 3:
