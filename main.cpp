@@ -66,47 +66,52 @@ int main() {
             cout << "Press 6 to Exit" << el;
             cout << "Press 0 to Return to Home Page."<<el;
             cin >> goTo;
-            Hotel h3;
-            Hotel *H;
             string HotelName;
             switch (goTo){
                 case 1:{
+                    int count;
+                    cout<<"How many Hotels you want to insert"<<el;
+                    cin>>count;
                     char check;
-                    cout << "Enter hotel name: " << el;
-                    cin >> h3.name;
-                    cout << "Enter hotel country: " << el;
-                    cin >> h3.country;
-                    cout << "Enter hotel location: " << el;
-                    cin >> h3.location;
-                    cout << "Enter hotel number of starts: " << el;
-                    cin >> h3.stars;
-                    cout << "hotel has gym (Y/N): " << el;
-                    cin >> check;
-                    if (check== 'Y' || check== 'y')
-                        h3.hasGym = true;
-                    else
-                        h3.hasGym = false;
-                    cout << "hotel has pool (Y/N): " << el;
-                    cin >> check;
-                    if (check== 'Y' || check== 'y')
-                        h3.hasPool = true;
-                    else
-                        h3.hasPool = false;
-                    cout << "Enter hotel number of rooms: " << el;
-                    cin >> h3.roomNumbers;
-                    cout << "Enter hotel rate: " << el;
-                    cin >> h3.rate;
-                    cout << "Enter hotel availability: " << el;
-                    for (int i = 0; i < 7; ++i) {
-                        cout << days[i] << " :";
+                    Hotel* hotels = new Hotel[count];
+                    for (int i = 0; i < count; ++i) {
+
+                        cout << "Enter hotel name: " << el;
+                        cin >> hotels[i].name;
+                        cout << "Enter hotel country: " << el;
+                        cin >> hotels[i].country;
+                        cout << "Enter hotel location: " << el;
+                        cin >> hotels[i].location;
+                        cout << "Enter hotel number of starts: " << el;
+                        cin >> hotels[i].stars;
+                        cout << "hotel has gym (Y/N): " << el;
                         cin >> check;
-                        if (check== 'Y' || check== 'y')
-                            h3.available[i] = true;
+                        if (check == 'Y' || check == 'y')
+                            hotels[i].hasGym = true;
                         else
-                            h3.available[i] = false;
+                            hotels[i].hasGym = false;
+                        cout << "hotel has pool (Y/N): " << el;
+                        cin >> check;
+                        if (check == 'Y' || check == 'y')
+                            hotels[i].hasPool = true;
+                        else
+                            hotels[i].hasPool = false;
+                        cout << "Enter hotel number of rooms: " << el;
+                        cin >> hotels[i].roomNumbers;
+                        cout << "Enter hotel rate: " << el;
+                        cin >> hotels[i].rate;
+                        cout << "Enter hotel availability: " << el;
+                        for (int i = 0; i < 7; ++i) {
+                            cout << days[i] << " :";
+                            cin >> check;
+                            if (check == 'Y' || check == 'y')
+                                hotels[i].available[i] = true;
+                            else
+                                hotels[i].available[i] = false;
+                        }
+                        arr.append(hotels[i]);
                     }
-                    H = &h3;
-                    arr.append(*H);
+                    cout<<"Insertion has been done successfully Mr. "<<a.getUserName()<<el;
                     goto AdminMenu;
                 }
                 case 2:
