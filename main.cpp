@@ -29,7 +29,7 @@ int main() {
     h.available[3] = false;
     h.available[4] = false;
 
-    ArrayList arr(3);
+    ArrayList arr(10);
     arr.append(h);
     arr.append(h2);
 

@@ -27,10 +27,10 @@ void Hotel::display() {
     cout<<"\t\t\t\t Hotel number of stars :" <<stars<<el;
     cout<<"\t\t\t\t Hotel rate :" <<rate<<el;
     cout<<"\t\t\t\t Hotel number of rooms :" <<roomNumbers<<el;
-    if (hasGym==true)
+    if (hasGym)
         cout<<"\t\t\t\t Has a gym :" <<"yes"<<el;
     else cout<<"\t\t\t\t Has a gym :" <<"No gyms"<<el;
-    if (hasPool==true)
+    if (hasPool)
         cout<<"\t\t\t\t Has a pool :" <<"yes"<<el;
     else cout<<"\t\t\t\t Has a pool :" <<"No pools"<<el;
     cout<<el;
