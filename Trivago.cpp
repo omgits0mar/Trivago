@@ -9,7 +9,7 @@
 #define el '\n'
 
 using namespace std;
-
+string day[7] ={"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
 
 ArrayList::ArrayList(int s){
     count=0;
@@ -32,7 +32,7 @@ void ArrayList::append(Hotel value) {
 
 
 void ArrayList::expand() {
-    size +1; //define new capacity
+    size ++; //define new capacity
     Hotel* temp=new Hotel[size];
     for (int i = 0; i < count; ++i) {
         temp[i]=arr[i];
@@ -48,10 +48,13 @@ void ArrayList::display() {
     }
 }
 
-void ArrayList::displayHotel(string n) {
+void ArrayList::displayHotel(string n, int x = 0) {
     for (int i = 0; i < count; i++) {
-        if (arr[i].name == n)
+        if (arr[i].name == n && x == 0)
             arr[i].display();
+        else
+            HotelUpdate(n, i);
+        break;
     }
 }
 
@@ -203,6 +206,79 @@ int ArrayList::filterByHotelNumberOfStars(){
         return starNumber;
     }
 }
+
+void ArrayList::HotelUpdate(string name, int hotelIndex) {
+    int number;
+    bool check = false;
+    cout << "Chose from the following list"<< el;
+    cout << "press 1 for Hotel name." << el;
+    cout << "press 2 for Hotel country." << el;
+    cout << "press 3 for Hotel location." << el;
+    cout << "press 4 for Hotel number of stars." << el;
+    cout << "press 5 for Hotel number of rooms." << el;
+    cout << "press 6 for Hotel has gym." << el;
+    cout << "press 7 for Hotel has pool." << el;
+    cout << "press 8 for Hotel rate." << el;
+    cout << "press 9 for Hotel availability." << el;
+    cin >> number;
+    switch (number) {
+        case 1:
+            cout << "Enter hotel name: " << el;
+            cin >> arr[hotelIndex].name;
+            break;
+        case 2:
+            cout << "Enter hotel country: " << el;
+            cin >> arr[hotelIndex].country;
+            break;
+        case 3:
+            cout << "Enter hotel location: " << el;
+            cin >> arr[hotelIndex].location;
+            break;
+        case 4:
+            cout << "Enter hotel number of starts: " << el;
+            cin >> arr[hotelIndex].stars;
+            break;
+        case 5:
+            cout << "Enter hotel number of rooms: " << el;
+            cin >> arr[hotelIndex].roomNumbers;
+            break;
+        case 6:
+            cout << "hotel has gym (Y/N): " << el;
+            cin >> check;
+            if (check == 'Y' || check == 'y')
+                arr[hotelIndex].hasGym = true;
+            else
+                arr[hotelIndex].hasGym = false;
+            break;
+        case 7:
+            cout << "hotel has pool (Y/N): " << el;
+            cin >> check;
+            if (check == 'Y' || check == 'y')
+                arr[hotelIndex].hasPool = true;
+            else
+                arr[hotelIndex].hasPool = false;
+            break;
+        case 8:
+            cout << "Enter hotel rate: " << el;
+            cin >> arr[hotelIndex].rate;
+            break;
+        case 9:
+            cout << "Enter hotel availability: " << el;
+            for (int i = 0; i < 7; ++i) {
+                cout << day[i] << " :";
+                cin >> check;
+                if (check == 'Y' || check == 'y')
+                    arr[hotelIndex].available[i] = true;
+                else
+                    arr[hotelIndex].available[i] = false;
+            }
+            break;
+        default:
+            break;
+
+    }
+
+};
 
 
 // Lab 4

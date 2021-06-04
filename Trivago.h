@@ -23,7 +23,7 @@ public:
     void append(Hotel);
     void expand();
     void display();
-    void displayHotel(string);
+    void displayHotel(string, int);
     Hotel findAt(int);
     void insertAt(int, Hotel);
     void deleteAt(int);
@@ -33,6 +33,7 @@ public:
     void filterByHotelNumberOfStars(int);
     int searchHotelsAvailability();
     int filterByHotelNumberOfStars();
+    void HotelUpdate(string, int );
     ~ArrayList();
 };
 

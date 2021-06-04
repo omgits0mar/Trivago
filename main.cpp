@@ -1,7 +1,7 @@
 #include "Trivago.h"
 #include <iostream>
 #define el '\n'
-#define t template<class dt>
+
 
 
 using namespace std;
@@ -115,6 +115,10 @@ int main() {
                     goto AdminMenu;
                 }
                 case 2:
+                    arr.display();
+                    cout << "please enter the hotel name that you want to Modify from the above:" << el;
+                    cin >> HotelName;
+                    arr.displayHotel(HotelName, 1);
                     goto AdminMenu;
                 case 3:
                     ErrorSearch:
@@ -145,7 +149,7 @@ int main() {
                     if(display == 1){
                         cout << "Enter the hotel name that you want to display:"<< el;
                         cin >> HotelName;
-                        arr.displayHotel(HotelName);
+                        arr.displayHotel(HotelName, 0);
                     }else if(display == 2){
                         arr.display();
                     }else{
@@ -208,18 +212,6 @@ int main() {
                     break;
             }
         }
-
-
-
-
-        /*
-            int day,month,year;
-            cout<<"Enter the check in date: d/m/y"<<el;
-            cin>>day>>month>>year;
-            system("cls");
-
-            cout<<day<<"/"<<month<<"/"<<year<<el;
-         */
 
     }
     else{
