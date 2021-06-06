@@ -48,13 +48,19 @@ void ArrayList::display() {
     }
 }
 
-void ArrayList::displayHotel(string n, int x = 0) {
+void ArrayList::displayHotel2(string n, int x = 0) {
     for (int i = 0; i < count; i++) {
         if (arr[i].name == n && x == 0)
             arr[i].display();
         else
             HotelUpdate(n, i);
         break;
+    }
+}
+void ArrayList::displayHotel(string n) {
+    for (int i = 0; i < count; i++) {
+        if (arr[i].name == n)
+            arr[i].display();
     }
 }
 
@@ -279,25 +285,4 @@ void ArrayList::HotelUpdate(string name, int hotelIndex) {
     }
 
 };
-
-
-// Lab 4
-
-
-
-
-//Admin::Admin() {
-//    userName="Ibrahim";
-//    pass="123456";
-//}
-//
-//
-//Room::Room() {
-//    ID=0;
-//    roomType="single";
-//    wifi=false;
-//    tv=false;
-//    reservation_duration=" ";
-//    price=0.0;
-//}
 

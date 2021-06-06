@@ -14,7 +14,7 @@ class Trivago {
 };
 
 class ArrayList{
-private:
+public:
     Hotel* arr;
     int count,size;
 public:
@@ -23,7 +23,8 @@ public:
     void append(Hotel);
     void expand();
     void display();
-    void displayHotel(string, int);
+    void displayHotel2(string, int);
+    void displayHotel(string n);
     Hotel findAt(int);
     void insertAt(int, Hotel);
     void deleteAt(int);
